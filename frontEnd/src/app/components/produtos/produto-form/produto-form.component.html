@@ -1,0 +1,23 @@
+<h1>{{ pageTitle }}</h1>
+
+<div>
+    <form [formGroup]="formGroup">
+        <div>
+            <label for="codigo">Código:</label>
+            <input type="text" formControlName="codigo" />
+        </div>
+        <div>
+            <label for="descricao">Descrição:</label>
+            <input type="text" formControlName="descricao" />
+        </div>
+        <div>
+            <label for="valor">valor:</label>
+            <input type="text" formControlName="valor" />
+        </div>
+        <div>
+            <button type="submit" [disabled]="!formGroup.valid" (click)="onSubmit()">
+                Salvar
+            </button>
+        </div>
+    </form>
+</div>

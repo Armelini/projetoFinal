@@ -1,0 +1,31 @@
+<h1>{{ pageTitle }}</h1>
+
+<div>
+    <form [formGroup]="formGroup">
+        <div>
+            <label for="codigo">Código:</label>
+            <input type="text" formControlName="codigo" />
+        </div>
+        <div>
+            <label for="nomeFantasia">Nome Fantasia:</label>
+            <input type="text" formControlName="nomeFantasia" />
+        </div>
+        <div>
+            <label for="razaoSocial">Razão Social:</label>
+            <input type="text" formControlName="razaoSocial" />
+        </div>
+        <div>
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" formControlName="cnpj" />
+        </div>
+        <div>
+            <label for="endereco">Endereço:</label>
+            <input type="text" formControlName="endereco" />
+        </div>
+        <div>
+            <button type="submit" [disabled]="!formGroup.valid" (click)="onSubmit()">
+                Salvar
+            </button>
+        </div>
+    </form>
+</div>
